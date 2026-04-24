@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sacred Editorial | Blogs</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#c0191b",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#bf1c10",
+                        "on-surface": "#1c1b1b",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#904d00",
+                        "on-primary-container": "#ffd3ce",
+                        "on-surface-variant": "#5c403d",
+                        "on-primary-fixed-variant": "#93000a",
+                        "surface-container-high": "#eae7e7",
+                        "secondary-fixed": "#ffdcc3",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-primary-fixed": "#410002",
+                        "surface-container": "#f0eded",
+                        "surface": "#fcf9f8",
+                        "surface-dim": "#dcd9d9",
+                        "inverse-surface": "#313030",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#ffb4ab",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "surface-tint": "#bc1518",
+                        "tertiary": "#980000",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-container-low": "#f6f3f2",
+                        "on-secondary-fixed-variant": "#6e3900",
+                        "surface-variant": "#e5e2e1",
+                        "primary-fixed": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1c1b1b",
+                        "on-tertiary-fixed": "#410000",
+                        "outline": "#906f6b",
+                        "tertiary-fixed": "#ffdad4",
+                        "secondary-container": "#fd8b00",
+                        "primary": "#98000b",
+                        "tertiary-fixed-dim": "#ffb4a8",
+                        "outline-variant": "#e5bdb9",
+                        "on-tertiary-container": "#ffd3cc",
+                        "on-secondary-container": "#603100",
+                        "surface-bright": "#fcf9f8",
+                        "on-secondary-fixed": "#2f1500",
+                        "background": "#fcf9f8",
+                        "on-tertiary-fixed-variant": "#930000",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#ffb77d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": [
+                            "Noto Serif"
+                        ],
+                        "body": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "label": [
+                            "Plus Jakarta Sans"
+                        ]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .agni-gradient {
+            background: linear-gradient(135deg, #98000b 0%, #c0191b 100%);
+        }
+
+        .glass-nav {
+            background: rgba(252, 249, 248, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(229, 189, 185, 0.15);
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed">
+    <!-- TopAppBar Component -->
+    <header class="sticky top-0 z-50 glass-nav">
+        <div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+            <div class="text-2xl font-bold text-[#98000b] dark:text-red-500 font-serif">
+                Sacred Editorial
+            </div>
+            <nav class="hidden md:flex items-center gap-8 font-serif tracking-tight text-lg">
+                <a class="text-stone-600 dark:text-stone-400 hover:text-[#98000b] transition-colors"
+                    href="index.html">Home</a>
+                <a class="text-stone-600 dark:text-stone-400 hover:text-[#98000b] transition-colors"
+                    href="aboutus.html">About
+                    Us</a>
+                <a class="text-stone-600 dark:text-stone-400 hover:text-[#98000b] transition-colors"
+                    href="puja.html">Puja</a>
+                <a class="text-[#98000b] dark:text-red-400 border-b-2 border-[#c0191b] pb-1 font-bold"
+                    href="blog.html">Blogs</a>
+                <a class="text-stone-600 dark:text-stone-400 hover:text-[#98000b] transition-colors"
+                    href="contact.html">Contact
+                    Us</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button
+                    class="p-2 hover:bg-stone-200/50 dark:hover:bg-stone-800/50 transition-colors rounded-full active:scale-95 duration-150">
+                    <span class="material-symbols-outlined text-[#98000b] dark:text-red-500"
+                        data-icon="call">call</span>
+                </button>
+                <button
+                    class="p-2 hover:bg-stone-200/50 dark:hover:bg-stone-800/50 transition-colors rounded-full active:scale-95 duration-150">
+                    <span class="material-symbols-outlined text-[#98000b] dark:text-red-500"
+                        data-icon="mail">mail</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section with Asymmetric Layout -->
+        <section class="relative overflow-hidden bg-surface-container-low pt-20 pb-32">
+            <div class="max-w-screen-2xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 items-center gap-12">
+                <div class="md:col-span-7 z-10">
+                    <span
+                        class="font-label uppercase tracking-[0.2em] text-secondary text-sm font-semibold mb-4 block">Our
+                        Journal</span>
+                    <h1 class="font-headline text-6xl md:text-8xl text-on-surface tracking-tighter leading-tight mb-8">
+                        The Eternal <br /><span class="text-primary italic">Whisper</span>
+                    </h1>
+                    <nav class="flex items-center gap-3 text-on-surface-variant font-label text-xs tracking-widest">
+                        <a class="hover:text-primary transition-colors" href="#">HOME</a>
+                        <span class="material-symbols-outlined text-[10px]"
+                            data-icon="chevron_right">chevron_right</span>
+                        <span class="text-primary font-bold">BLOGS</span>
+                    </nav>
+                </div>
+                <div class="md:col-span-5 relative">
+                    <div class="aspect-[4/5] overflow-hidden rounded-xl shadow-2xl relative">
+                        <img alt="Sacred flame ritual" class="w-full h-full object-cover"
+                            data-alt="Close-up of a sacred oil lamp 'Diya' with a glowing warm flame, soft incense smoke in the background, warm amber lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6Ag3id8JIKdp2IerftsuU4dRvdKMOSRDIYzl4up048qsoy2wQUkq-X2ZxTEjM7xZE86QDjldCZEpLc-5tbYxe6lok-PAHbW-eaEMqS8BkusSzjUa7DEHheQZ4RmuuW6cLFnUBI8KA8lpPBOTOtow0-jvO3x-nNRbLsEq6Ic2rsulrJYYll8zRtcdgG1hKq7qulwdzKDvD-HkTXk_LBJZvu7I5RezKn413iWkLT2H1LiRGoqKOkmh1yM2N45LUYk0whjiBLzXCFAU" />
+                        <div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+                    </div>
+                    <!-- Decorative element -->
+                    <div
+                        class="absolute -bottom-8 -left-8 w-48 h-48 agni-gradient opacity-20 blur-3xl -z-10 rounded-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Content Grid & Sidebar -->
+        <section class="max-w-screen-2xl mx-auto px-8 py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <!-- Blog Grid -->
+                <div class="lg:col-span-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <!-- Blog Post 1 -->
+                        <article class="group">
+                            <div
+                                class="relative mb-6 overflow-hidden rounded-xl bg-surface-container-highest aspect-[16/10]">
+                                <img alt="Temple Architecture"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    data-alt="Intricate stone carvings on an ancient Hindu temple wall, golden morning sunlight creating deep shadows and highlights"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXmkd6rCPt87V8G9Sd0ize7NSXdyKrBpnsC0NHzfU2YXCIizZMKrb8osZw3zpLHWBvso7JB53OtN4rM0QfVkF9FkIMwwPnKvyUdv4K56gyzB-KtTTJ7eFQtbc9wK2xrUlX_DQxhmMNzbWGU6oRBsQkA3eqQL8_o6iOH0Ivca4Z-OXBoRiFNvvqpLLmVHnIRFGqJM6Yt6vtUQt-ROpcxC0n5eGl7qboP9LK7b7lNIWzuA-5RFDZfehtWxL66SOdQV5ZzXrSg39rwmU" />
+                                <div class="absolute top-4 left-4">
+                                    <span
+                                        class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-xs font-bold font-label tracking-wider uppercase">Rituals</span>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <span
+                                    class="font-label text-xs text-on-surface-variant tracking-widest uppercase">OCTOBER
+                                    24, 2023</span>
+                                <h2
+                                    class="font-headline text-3xl text-on-surface leading-snug group-hover:text-primary transition-colors cursor-pointer">
+                                    Unveiling the Mysteries of Prana Pratishtha</h2>
+                                <p class="text-on-surface-variant font-body leading-relaxed line-clamp-3">
+                                    Deep within the sanctum of the ancient shrines, the ritual of Prana Pratishtha
+                                    brings the divine essence into physical form. Explore the metaphysical significance
+                                    of this sacred ceremony...
+                                </p>
+                                <a class="inline-flex items-center gap-2 text-primary font-bold tracking-tight hover:gap-4 transition-all duration-300"
+                                    href="#">
+                                    READ MORE
+                                    <span class="material-symbols-outlined text-sm"
+                                        data-icon="arrow_right_alt">arrow_right_alt</span>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- Blog Post 2 -->
+                        <article class="group">
+                            <div
+                                class="relative mb-6 overflow-hidden rounded-xl bg-surface-container-highest aspect-[16/10]">
+                                <img alt="Meditation Session"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    data-alt="Peaceful meditation setting with marigold petals scattered around a copper bowl, soft morning mist in the background"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuClcTT16pv5EnpNmAuSq-e7ENU-yI4zvsP6vFrBAJa_bkXkaGHjee1R16zTby4qgfSrJyhY_Tlm0H6aji5kM631Yk7y2FKMUka1kvNwDk0x3ap-0GjcaE5KyWHAnni2MTslb8-tlOCKWSxRKz__w-lURArLWNfW1_ht0mH7cTLiE3G0seTjDuOVIj1sKN2HG1RQEdZFJn6wU_smSu1oowkrUvJxTpuprgjWf_rwMHfNTNaxHHEd4Nx8XNW1NCqWzkgXMLI0uUKR0ho" />
+                                <div class="absolute top-4 left-4">
+                                    <span
+                                        class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-xs font-bold font-label tracking-wider uppercase">Wisdom</span>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <span
+                                    class="font-label text-xs text-on-surface-variant tracking-widest uppercase">OCTOBER
+                                    20, 2023</span>
+                                <h2
+                                    class="font-headline text-3xl text-on-surface leading-snug group-hover:text-primary transition-colors cursor-pointer">
+                                    Silence: The Language of the Soul</h2>
+                                <p class="text-on-surface-variant font-body leading-relaxed line-clamp-3">
+                                    In a world filled with digital noise, the practice of Mauna (silence) offers a path
+                                    to rediscovering one's inner equilibrium and hearing the subtle voice of the
+                                    divine...
+                                </p>
+                                <a class="inline-flex items-center gap-2 text-primary font-bold tracking-tight hover:gap-4 transition-all duration-300"
+                                    href="#">
+                                    READ MORE
+                                    <span class="material-symbols-outlined text-sm"
+                                        data-icon="arrow_right_alt">arrow_right_alt</span>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- Blog Post 3 (Featured Style) -->
+                        <article
+                            class="md:col-span-2 group grid grid-cols-1 md:grid-cols-2 gap-8 bg-surface-container-low rounded-2xl p-8 items-center">
+                            <div class="overflow-hidden rounded-xl aspect-square md:aspect-video">
+                                <img alt="Ganga Aarti"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    data-alt="Dusk at the Ganges river bank, dozens of glowing ritual lamps reflected in the water, vibrant atmosphere of devotion"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9EWpTYFWQyBQxym9d0kJHcEH0iJlDuTenEVUBm7gLGZQbDWm_kZ3ecor926aAYCb4iesIqPj18xwvWzH-tKfYcOqSnli3_RknOR4zm0v8Qs3SaIdgP0Tv0zZiZFTtE0Wap2I1r8OuWfiDYmUdIZvsmf3QOH_0W7ZMerQCwuSACq7L368ZF_OEDV_FQEfGLpqL9cA8i0Gx1v_huJfUy-V_WkgA_tovzFvkUPshElTDxgx6LU4Wi2bK5FBoxHFPmlelaBh42JFHQA4" />
+                            </div>
+                            <div class="space-y-6">
+                                <div class="flex items-center justify-between">
+                                    <span
+                                        class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-xs font-bold font-label tracking-wider uppercase">Community</span>
+                                    <span
+                                        class="font-label text-xs text-on-surface-variant tracking-widest uppercase">OCTOBER
+                                        15, 2023</span>
+                                </div>
+                                <h2
+                                    class="font-headline text-4xl text-on-surface leading-tight group-hover:text-primary transition-colors cursor-pointer">
+                                    The Echoes of Varanasi: A Pilgrimage</h2>
+                                <p class="text-on-surface-variant font-body leading-relaxed">
+                                    Journey through the narrow winding lanes of the world's oldest living city. From the
+                                    evening Aarti to the morning prayers at the Ghats, Varanasi remains the spiritual
+                                    heart of the civilization.
+                                </p>
+                                <a class="inline-flex h-12 items-center justify-center px-8 agni-gradient text-white font-bold rounded-md active:scale-95 duration-150 shadow-lg shadow-primary/20"
+                                    href="#">
+                                    READ THE FULL STORY
+                                </a>
+                            </div>
+                        </article>
+                        <!-- Blog Post 4 -->
+                        <article class="group">
+                            <div
+                                class="relative mb-6 overflow-hidden rounded-xl bg-surface-container-highest aspect-[16/10]">
+                                <img alt="Sacred Text"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    data-alt="Antique parchment with Sanskrit calligraphy, lit by a soft warm desk lamp, aesthetic of wisdom and study"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1wLr0EFYxTma9JiZDIQudyl473i-7RLhvzwGT4gB1AmSSZ7DHIbCYSJ66gfAhtecUf2ki8nZsCuf2cyfElFvXt40TGa6pm8PI-eHnsvmeQoWpyS_Lg0L1Kal8LpQ3yE4a4nhbvVmGxKFDrOQvxbwXRfY8Y25sED2-2TbcrPJt1ngmOTXmLNFfxgNA-bEmGb5TFm63FrUlzj2GiojSjlzpNHPD1nyTsefh3tfUNpOa3TlUhIVPp5GhRfvc6G0O5d71FZ_p2Df1UzQ" />
+                                <div class="absolute top-4 left-4">
+                                    <span
+                                        class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-xs font-bold font-label tracking-wider uppercase">Wisdom</span>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <span
+                                    class="font-label text-xs text-on-surface-variant tracking-widest uppercase">OCTOBER
+                                    10, 2023</span>
+                                <h2
+                                    class="font-headline text-3xl text-on-surface leading-snug group-hover:text-primary transition-colors cursor-pointer">
+                                    Understanding Dharma in Modern Times</h2>
+                                <p class="text-on-surface-variant font-body leading-relaxed line-clamp-3">
+                                    How do ancient principles of righteousness apply to the complex ethical landscape of
+                                    the 21st century? We bridge the gap between tradition and daily life...
+                                </p>
+                                <a class="inline-flex items-center gap-2 text-primary font-bold tracking-tight hover:gap-4 transition-all duration-300"
+                                    href="#">
+                                    READ MORE
+                                    <span class="material-symbols-outlined text-sm"
+                                        data-icon="arrow_right_alt">arrow_right_alt</span>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <!-- Sidebar -->
+                <aside class="lg:col-span-4 space-y-16">
+                    <!-- Search -->
+                    <div class="bg-surface-container rounded-2xl p-8">
+                        <h3 class="font-headline text-xl text-on-surface mb-6 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary" data-icon="search">search</span>
+                            Search Journal
+                        </h3>
+                        <div class="relative">
+                            <input
+                                class="w-full bg-surface-bright border-none border-b-2 border-outline-variant focus:border-primary focus:ring-0 rounded-none py-3 px-0 font-body transition-colors placeholder:text-stone-400"
+                                placeholder="Explore topics..." type="text" />
+                        </div>
+                    </div>
+                    <!-- Categories -->
+                    <div>
+                        <h3
+                            class="font-headline text-2xl text-on-surface mb-8 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-0.5 after:bg-primary">
+                            Categories
+                        </h3>
+                        <ul class="space-y-4">
+                            <li
+                                class="flex items-center justify-between group cursor-pointer py-2 hover:bg-surface-container-low px-2 transition-colors rounded-lg">
+                                <span class="text-on-surface-variant font-medium group-hover:text-primary">Rituals &amp;
+                                    Puja</span>
+                                <span
+                                    class="bg-surface-container-highest text-on-surface text-[10px] px-2 py-0.5 rounded-full font-bold">12</span>
+                            </li>
+                            <li
+                                class="flex items-center justify-between group cursor-pointer py-2 hover:bg-surface-container-low px-2 transition-colors rounded-lg">
+                                <span class="text-on-surface-variant font-medium group-hover:text-primary">Spiritual
+                                    Wisdom</span>
+                                <span
+                                    class="bg-surface-container-highest text-on-surface text-[10px] px-2 py-0.5 rounded-full font-bold">08</span>
+                            </li>
+                            <li
+                                class="flex items-center justify-between group cursor-pointer py-2 hover:bg-surface-container-low px-2 transition-colors rounded-lg">
+                                <span class="text-on-surface-variant font-medium group-hover:text-primary">Community
+                                    Stories</span>
+                                <span
+                                    class="bg-surface-container-highest text-on-surface text-[10px] px-2 py-0.5 rounded-full font-bold">15</span>
+                            </li>
+                            <li
+                                class="flex items-center justify-between group cursor-pointer py-2 hover:bg-surface-container-low px-2 transition-colors rounded-lg">
+                                <span class="text-on-surface-variant font-medium group-hover:text-primary">Festival
+                                    Calendar</span>
+                                <span
+                                    class="bg-surface-container-highest text-on-surface text-[10px] px-2 py-0.5 rounded-full font-bold">05</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Recent Posts -->
+                    <div>
+                        <h3
+                            class="font-headline text-2xl text-on-surface mb-8 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-0.5 after:bg-primary">
+                            Recent Wisdom
+                        </h3>
+                        <div class="space-y-8">
+                            <a class="flex gap-4 group" href="#">
+                                <div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+                                    <img alt="Recent 1"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform"
+                                        data-alt="Small brass prayer bell on a silk cloth, warm lighting"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEOjrntZcp0ICXp5d1KKD24NMHsAkd__XaE0ri_V7f4_3tIWLX-iHfeoPTKJPPwad1erLJJMWEN6MqIPNuFcov9loie2kKSOAHmuNjeg3WFiUHIz9f6rRyjJWiGGaEPTotRXnvDvXIQyDbwI0Vd0nN9dxQlAqqLb08AunvRw3GoNfu6pNkvwCksfUaiwphKf6_4fHJSfUTlcezm6ncvox1LpPEkX4zroOhJ9J6-V4_f6fkgHRFFfYVMtVxwo0vtb2uRDG6cufO5wY" />
+                                </div>
+                                <div>
+                                    <h4
+                                        class="font-headline text-sm leading-tight group-hover:text-primary transition-colors">
+                                        The Art of Satsang in Daily Life</h4>
+                                    <span
+                                        class="text-[10px] font-label text-on-surface-variant uppercase mt-2 block tracking-widest">Oct
+                                        2, 2023</span>
+                                </div>
+                            </a>
+                            <a class="flex gap-4 group" href="#">
+                                <div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+                                    <img alt="Recent 2"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform"
+                                        data-alt="Close up of incense sticks burning, fragrant white smoke swirls"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHxuEzyctl0bwR-xjU5Np9iLuA9365MC2a_ZZ6z_7JfX06d2T377qwkAGU7L2AGNPdHIMj6HwSASZ-P101gXCc0wU3PsW3-8zGWaLdMwiDIqae2fh63pSDrLV7E9mobjCH4-fwopCpeXvUiJeeKfq_D2ywnhg_4omhuDVWs5Lk4cnFhzwZvOuuodkRmD39NEGSlVTOV_VhpKzqrGu3cYLLTmYAwN0UMyt8Jnt2h0V3ft_gp7RTIAC1C9CTnyodRwkJyvkJ_AazNE0" />
+                                </div>
+                                <div>
+                                    <h4
+                                        class="font-headline text-sm leading-tight group-hover:text-primary transition-colors">
+                                        Decoding the Vedic Hymns</h4>
+                                    <span
+                                        class="text-[10px] font-label text-on-surface-variant uppercase mt-2 block tracking-widest">Sept
+                                        28, 2023</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Newsletter Sidebar Card -->
+                    <div class="agni-gradient rounded-2xl p-8 text-white relative overflow-hidden">
+                        <div class="relative z-10">
+                            <h3 class="font-headline text-2xl mb-4">Divine Updates</h3>
+                            <p class="text-on-primary-container text-sm leading-relaxed mb-6 opacity-90">
+                                Subscribe to receive our weekly editorial on spirituality, rituals, and mindful living.
+                            </p>
+                            <div class="space-y-4">
+                                <input
+                                    class="w-full bg-white/10 border border-white/20 rounded-lg py-3 px-4 text-white placeholder:text-white/60 focus:ring-0 focus:bg-white/20"
+                                    placeholder="Your email address" type="email" />
+                                <button
+                                    class="w-full bg-surface-bright text-primary font-bold py-3 rounded-lg hover:bg-on-primary-container transition-colors active:scale-95">SUBSCRIBE</button>
+                            </div>
+                        </div>
+                        <span
+                            class="material-symbols-outlined absolute -bottom-8 -right-8 text-white/10 text-9xl pointer-events-none"
+                            data-icon="auto_awesome">auto_awesome</span>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+    <!-- Footer Component -->
+    <footer class="bg-stone-100 dark:bg-stone-900 border-t-0 font-sans tracking-wide text-sm">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 w-full max-w-screen-2xl mx-auto">
+            <!-- Brand Column -->
+            <div class="space-y-6">
+                <div class="text-xl font-bold text-[#98000b] dark:text-red-500 font-serif">
+                    Sacred Editorial
+                </div>
+                <p class="text-stone-500 dark:text-stone-400 leading-relaxed">
+                    A digital sanctuary dedicated to preserving and sharing the timeless wisdom of ancient traditions
+                    for the modern seeker.
+                </p>
+            </div>
+            <!-- Links 1 -->
+            <div class="space-y-4">
+                <h4 class="font-bold text-on-surface uppercase tracking-widest text-xs">Our Services</h4>
+                <nav class="flex flex-col gap-3">
+                    <a class="text-stone-500 dark:text-stone-400 hover:text-[#fd8b00] transition-colors opacity-80 hover:opacity-100"
+                        href="#">Personalized Puja</a>
+                    <a class="text-stone-500 dark:text-stone-400 hover:text-[#fd8b00] transition-colors opacity-80 hover:opacity-100"
+                        href="#">Vedic Astrology</a>
+                    <a class="text-stone-500 dark:text-stone-400 hover:text-[#fd8b00] transition-colors opacity-80 hover:opacity-100"
+                        href="#">Spiritual Retreats</a>
+                    <a class="text-stone-500 dark:text-stone-400 hover:text-[#fd8b00] transition-colors opacity-80 hover:opacity-100"
+                        href="#">Sacred Store</a>
+                </nav>
+            </div>
+            <!-- Links 2 -->
+            <div class="space-y-4">
+                <h4 class="font-bold text-on-surface uppercase tracking-widest text-xs">Helpful Links</h4>
+                <nav class="flex flex-col gap-3">
+                    <a class="text-stone-500 dark:text-stone-400 hover:text-[#fd8b00] transition-colors opacity-80 hover:opacity-100"
+                        href="#">Privacy Policy</a>
+                    <a class="text-stone-500 dark:text-stone-400 hover:text-[#fd8b00] transition-colors opacity-80 hover:opacity-100"
+                        href="#">Terms of Service</a>
+                    <a class="text-stone-500 dark:text-stone-400 hover:text-[#fd8b00] transition-colors opacity-80 hover:opacity-100"
+                        href="#">FAQ</a>
+                    <a class="text-stone-500 dark:text-stone-400 hover:text-[#fd8b00] transition-colors opacity-80 hover:opacity-100"
+                        href="#">Temple Locators</a>
+                </nav>
+            </div>
+            <!-- Contact Info -->
+            <div class="space-y-4">
+                <h4 class="font-bold text-on-surface uppercase tracking-widest text-xs">Contact Info</h4>
+                <div class="text-stone-500 dark:text-stone-400 space-y-3">
+                    <p class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-lg"
+                            data-icon="location_on">location_on</span>
+                        108 Dharma Marg, Varanasi, UP
+                    </p>
+                    <p class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-lg" data-icon="phone">phone</span>
+                        +91 542 234 5678
+                    </p>
+                    <p class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-lg" data-icon="mail">mail</span>
+                        enquiry@sacrededitorial.com
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-stone-200 dark:border-stone-800 py-8 px-12 text-center text-stone-400 text-xs">
+            © 2024 Sacred Editorial. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+
+</html>
