@@ -1,0 +1,38 @@
+import json
+
+acf_group = [
+    {
+        "key": "group_homepage",
+        "title": "Homepage Settings",
+        "fields": [
+            {"key": "field_hero_sub", "label": "Hero Subtitle", "name": "hero_subtitle", "type": "text"},
+            {"key": "field_hero_title", "label": "Hero Title", "name": "hero_title", "type": "text"},
+            {"key": "field_hero_desc", "label": "Hero Description", "name": "hero_description", "type": "textarea"},
+            {"key": "field_hero_btn_txt", "label": "Hero Button Text", "name": "hero_button_text", "type": "text"},
+            {"key": "field_hero_btn_link", "label": "Hero Button Link", "name": "hero_button_link", "type": "url"},
+            {"key": "field_hero_img", "label": "Hero Image", "name": "hero_image", "type": "image", "return_format": "url"},
+
+            {"key": "field_about_sub", "label": "About Subtitle", "name": "about_subtitle", "type": "text"},
+            {"key": "field_about_title", "label": "About Title", "name": "about_title", "type": "text"},
+            {"key": "field_about_desc", "label": "About Description", "name": "about_description", "type": "textarea"},
+            {"key": "field_about_img1", "label": "About Image 1", "name": "about_image_1", "type": "image", "return_format": "url"},
+            {"key": "field_about_img2", "label": "About Image 2", "name": "about_image_2", "type": "image", "return_format": "url"},
+            
+            {"key": "field_news_sub", "label": "News Subtitle", "name": "news_subtitle", "type": "text"},
+            {"key": "field_news_title", "label": "News Title", "name": "news_title", "type": "text"}
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_type",
+                    "operator": "==",
+                    "value": "front_page"
+                }
+            ]
+        ],
+        "active": True
+    }
+]
+
+with open('sacred-editorial-theme/acf-export.json', 'w') as f:
+    json.dump(acf_group, f, indent=4)
