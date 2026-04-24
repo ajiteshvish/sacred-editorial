@@ -110,16 +110,20 @@
             <div class="text-2xl font-bold text-[#98000b] dark:text-red-500 font-serif">Sacred Editorial</div>
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-8">
-                <a class="text-[#98000b] dark:text-red-400 border-b-2 border-[#c0191b] pb-1 font-bold font-serif tracking-tight text-lg"
-                    href="index.html">Home</a>
-                <a class="text-stone-600 dark:text-stone-400 hover:text-[#98000b] transition-colors font-serif tracking-tight text-lg"
-                    href="aboutus.html">About Us</a>
-                <a class="text-stone-600 dark:text-stone-400 hover:text-[#98000b] transition-colors font-serif tracking-tight text-lg"
-                    href="puja.html">Puja</a>
-                <a class="text-stone-600 dark:text-stone-400 hover:text-[#98000b] transition-colors font-serif tracking-tight text-lg"
-                    href="blog.html">Blogs</a>
-                <a class="text-stone-600 dark:text-stone-400 hover:text-[#98000b] transition-colors font-serif tracking-tight text-lg"
-                    href="contact.html">Contact Us</a>
+                <?php
+                $active_class = 'text-[#98000b] dark:text-red-400 border-b-2 border-[#c0191b] pb-1 font-bold font-serif tracking-tight text-lg';
+                $inactive_class = 'text-stone-600 dark:text-stone-400 hover:text-[#98000b] transition-colors font-serif tracking-tight text-lg';
+                ?>
+                <a class="<?php echo is_front_page() || is_home() ? $active_class : $inactive_class; ?>"
+                    href="<?php echo esc_url(home_url('/')); ?>">Home</a>
+                <a class="<?php echo is_page('about-us') ? $active_class : $inactive_class; ?>"
+                    href="<?php echo esc_url(home_url('/about-us')); ?>">About Us</a>
+                <a class="<?php echo is_page('puja') ? $active_class : $inactive_class; ?>"
+                    href="<?php echo esc_url(home_url('/puja')); ?>">Puja</a>
+                <a class="<?php echo is_home() || is_archive() || is_single() ? $active_class : $inactive_class; ?>"
+                    href="<?php echo esc_url(get_permalink(get_option('page_for_posts')) ?: home_url('/blog')); ?>">Blogs</a>
+                <a class="<?php echo is_page('contact') ? $active_class : $inactive_class; ?>"
+                    href="<?php echo esc_url(home_url('/contact')); ?>">Contact Us</a>
             </div>
             <div class="flex items-center space-x-4">
                 <span
